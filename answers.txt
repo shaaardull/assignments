@@ -1,0 +1,18 @@
+3.    Clarification needed: Are we considering all shades of green? Since, this isn’t a two way communication so far, I assume that we’re including all shades of green.
+
+US population as of year 2018 was 32.68 Cr (source:https://www.census.gov/newsroom/press-kits/2018/pop-estimates-national-state.html)
+According to some of the famous fashion websites its very rare that a person buys green coloured t-shirts as people mostly prefer Black, White, green, Red, Navy Blue. Although, we assume that within a year, one person in every x number of people buys a green coloured t-shirt(where x is any positive integer). According to me its very unusual that someone buys a green coloured t shirt so I assume x to be ~15.
+i.e In every 15 people, one green t-shirt is bought within a year, likewise ~2.17 Cr green t-shirts were sold in the US in year 2018.
+
+
+4.0     Using the same above formulation to estimate the number of green t-shirts being sold in US in 2020, I consider x to be even larger than before due to the pandemic and set it to x=40, we get that ~81.7 Lakh t-shirts were sold in year 2020.
+
+4.1     Several more factors would add on to be taken into consideration while estimating  sales of green t-shirts in the year 2020. The pandemic caused instability in most of the businesses worldwide, also disrupting the demand - supply chain in the apparel industry. Coming back to the question, certain factors like the number of people going out for shopping, active users on online shopping apps, kind of clothing they’re into, their interest in specific colour of t shirt, the breakouts of covid waves, lockdowns being imposed in certain regions nationwide, etc. would add significance in forecasting sales.
+
+
+4.2.    Few factors mentioned earlier like number of people going out for shopping, kind of clothing they’re into, their interest in specific colour of t shirts can be easily fetched from few brand’s sales databases maybe also via web scraping. Also such kind of data with even more specifications / features can be pulled from databases of shopping sites/apps. Even if the data is present in the form of qualities or categories or maybe some kind of discrete values, we can use ordinal encoding techniques like label encoding in order to label our data.
+
+
+4.3.    Directly jumping on to deciding ML methods to be used in order to forecast / predict isn’t a good approach. Instead, we’d look into details of the data, try visualising it using some libraries like seaborn, check whether there are violations of assumptions of certain statistical methodologies we think might work after look at the data distributions and different plots. Might try some remedies on those problems and try fixing it or go for some another approach/algorithm.  There might be several algorithms which could be useful in the use case mentioned in the question, right from GLMs to Decision Trees, KNN, XGBoost or some time-series analysis models like ARIMA, Seasonal trend decomposition, etc.
+
+4.4.    There exist different metrics for evaluation of accuracies for differing models. Example: For a simple linear regression model we’d use MSE where as for logistic regression we’d construct a confusion matrix of actual vs predicted values and try calculating accuracy(which is the ratio of correctly predicted observations to the total predictions) or we’d look over F1 score in case of imbalanced dataset.
